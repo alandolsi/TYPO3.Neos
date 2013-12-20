@@ -3,6 +3,9 @@
 	<div id="neos-application" class="neos" role="application">
 		<div id="neos-top-bar">
 			<div id="neos-top-bar-right">
+				<div id="neos-user-actions" class="neos-pull-left">
+					<f:render partial="Backend/LanguageMenu" arguments="{_all}" />
+				</div>
 				<div id="neos-user-actions">
 					<f:render partial="Backend/UserMenu" arguments="{_all}" />
 				</div>

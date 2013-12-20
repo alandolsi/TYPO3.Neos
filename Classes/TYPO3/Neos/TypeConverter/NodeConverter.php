@@ -44,8 +44,21 @@ class NodeConverter extends \TYPO3\TYPO3CR\TypeConverter\NodeConverter {
 	protected $priority = 3;
 
 	/**
+	 * @Flow\Inject
+	 * @var \TYPO3\Flow\Session\SessionInterface
+	 */
+	protected $session;
+
+	/**
+	 * @Flow\Inject
+	 * @var \TYPO3\Flow\I18n\Service
+	 */
+	protected $localizationService;
+
+	/**
 	 * Creates the context for the nodes based on the given workspace.
 	 *
+	 * @Flow\Session(autoStart=TRUE)
 	 * @param string $workspaceName
 	 * @param \TYPO3\Flow\Property\PropertyMappingConfigurationInterface $configuration
 	 * @return \TYPO3\TYPO3CR\Domain\Service\ContextInterface
@@ -56,6 +69,15 @@ class NodeConverter extends \TYPO3\TYPO3CR\TypeConverter\NodeConverter {
 			'invisibleContentShown' => FALSE,
 			'removedContentShown' => FALSE
 		);
+
+		if ($this->session->hasKey('locale') === TRUE) {
+			$contextProperties['locale'] = $this->session->getData('locale');
+		} else {
+			$defaultLocale = $this->localizationService->getConfiguration()->getDefaultLocale();
+			$this->session->putData('locale', $defaultLocale);
+			$contextProperties['locale'] = $defaultLocale;
+		}
+
 		if ($workspaceName !== 'live') {
 			$contextProperties['invisibleContentShown'] = TRUE;
 			if ($configuration !== NULL && $configuration->getConfigurationValue('TYPO3\TYPO3CR\TypeConverter\NodeConverter', self::REMOVED_CONTENT_SHOWN) === TRUE) {

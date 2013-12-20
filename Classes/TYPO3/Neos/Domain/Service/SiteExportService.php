@@ -219,7 +219,7 @@ class SiteExportService {
 	 * @return void
 	 */
 	protected function exportNodeProperties(NodeInterface $node, array $additionalProperties = array()) {
-		$properties = $node->getProperties(TRUE);
+		$properties = $node->getNodeData()->getProperties();
 		$properties = array_merge($properties, $additionalProperties);
 		if (count($properties) > 0) {
 			$this->xmlWriter->startElement('properties');
@@ -271,22 +271,25 @@ class SiteExportService {
 				$this->xmlWriter->endElement();
 				break;
 			default:
-				if (is_object($propertyValue)) {
-					$this->xmlWriter->startElement($propertyName);
-					$this->xmlWriter->writeAttribute('__type', 'object');
-					$this->xmlWriter->writeAttribute('__classname', get_class($propertyValue));
-					$this->objectToXml($propertyValue);
-					$this->xmlWriter->endElement();
-				} elseif (strpos($propertyValue, '<') !== FALSE || strpos($propertyValue, '>') !== FALSE || strpos($propertyValue, '&') !== FALSE) {
-					$this->xmlWriter->startElement($propertyName);
-					if (strpos($propertyValue, '<![CDATA[') !== FALSE) {
-						$this->xmlWriter->writeCdata(str_replace(']]>', ']]]]><![CDATA[>', $propertyValue));
+				if ($node->getNodeType()->isPropertyTranslatable($propertyName)) {
+					if (is_array($propertyValue)) {
+						$this->xmlWriter->startElement($propertyName);
+						foreach ($propertyValue as $locale => $localizedValue) {
+							if (is_object($localizedValue)) {
+								$this->writePropertyXml($propertyName, $localizedValue, $locale);
+							} else {
+								$this->xmlWriter->startElement('value');
+								$this->xmlWriter->writeAttribute('locale', $locale);
+								$this->writePropertyXml($propertyName, $localizedValue);
+								$this->xmlWriter->endElement();
+							}
+						}
+						$this->xmlWriter->endElement();
 					} else {
-						$this->xmlWriter->writeCdata($propertyValue);
+						$this->writePropertyXml($propertyName, $propertyValue);
 					}
-					$this->xmlWriter->endElement();
 				} else {
-					$this->xmlWriter->writeElement($propertyName, is_scalar($propertyValue) ? (string)$propertyValue : '');
+					$this->writePropertyXml($propertyName, $propertyValue);
 				}
 				break;
 		}
@@ -344,5 +347,40 @@ class SiteExportService {
 		}
 		$this->xmlWriter->endElement();
 		$this->xmlWriter->endElement();
+	}
+
+	/**
+	 * Write Property of a node
+	 *
+	 * @param string $propertyName
+	 * @param mixed $propertyValue
+	 */
+	protected function writePropertyXml($propertyName, $propertyValue, $locale = NULL) {
+		if (is_object($propertyValue)) {
+			if ($locale != NULL) {
+				$this->xmlWriter->writeAttribute('__type', 'object');
+				$this->xmlWriter->writeAttribute('__classname', get_class($propertyValue));
+				$this->xmlWriter->startElement('value');
+				$this->xmlWriter->writeAttribute('locale', $locale);
+				$this->objectToXml($propertyValue);
+				$this->xmlWriter->endElement();
+			} else {
+				$this->xmlWriter->startElement($propertyName);
+				$this->xmlWriter->writeAttribute('__type', 'object');
+				$this->xmlWriter->writeAttribute('__classname', get_class($propertyValue));
+				$this->objectToXml($propertyValue);
+				$this->xmlWriter->endElement();
+			}
+		} elseif (strpos($propertyValue, '<') !== FALSE || strpos($propertyValue, '>') !== FALSE || strpos($propertyValue, '&') !== FALSE) {
+			$this->xmlWriter->startElement($propertyName);
+			if (strpos($propertyValue, '<![CDATA[') !== FALSE) {
+				$this->xmlWriter->writeCdata(str_replace(']]>', ']]]]><![CDATA[>', $propertyValue));
+			} else {
+				$this->xmlWriter->writeCdata($propertyValue);
+			}
+			$this->xmlWriter->endElement();
+		} else {
+			$this->xmlWriter->writeElement($propertyName, is_scalar($propertyValue) ? (string) $propertyValue : '');
+		}
 	}
 }

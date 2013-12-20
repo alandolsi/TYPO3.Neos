@@ -15,6 +15,7 @@ additionalProperties:
             type: dictionary
             additionalProperties: FALSE
             properties:
+              'translatable' : { type: boolean, description: "If TRUE, property content will be translatable" }
 
               'label': { type: string, description: "Human-readable label for this property." }
 
