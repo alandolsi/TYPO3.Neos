@@ -65,17 +65,27 @@ class NodeController extends ActionController {
 	protected $view;
 
 	/**
+	 * @Flow\Inject
+	 * @var \TYPO3\Flow\I18n\Service
+	 */
+	protected $localizationService;
+
+	/**
 	 * Shows the specified node and takes visibility and access restrictions into
 	 * account.
 	 *
 	 * @param Node $node
+	 * @param string $locale
 	 * @return string View output for the specified node
 	 */
-	public function showAction(Node $node) {
+	public function showAction(Node $node, $locale = NULL) {
+		if ($locale !== NULL) {
+			$this->session->putData('locale', new \TYPO3\Flow\I18n\Locale($locale));
+		}
+		$contextProperties = $node->getContext()->getProperties();
 		if ($node->getContext()->getWorkspace()->getName() !== 'live') {
 				// TODO: Introduce check if workspace is visible or accessible to the user
 			if ($this->hasAccessToBackend()) {
-				$contextProperties = $node->getContext()->getProperties();
 				$contextProperties['invisibleContentShown'] = TRUE;
 				$contextProperties['removedContentShown'] = FALSE;
 				$contextProperties['invisibleContentShown'] = TRUE;
@@ -84,7 +94,14 @@ class NodeController extends ActionController {
 			} else {
 				$this->redirect('index', 'Login');
 			}
+		} else {
+			$this->localizationService->getConfiguration()->setCurrentLocale($this->session->getData('locale'));
 		}
+		if ($locale !== NULL) {
+			$contextProperties['locale'] = new \TYPO3\Flow\I18n\Locale($locale);
+		}
+		$context = $this->contextFactory->create($contextProperties);
+		$node = $context->getNode($node->getPath());
 		if (!$node->isAccessible()) {
 			try {
 				$this->authenticationManager->authenticate();

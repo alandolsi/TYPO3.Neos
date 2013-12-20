@@ -319,8 +319,19 @@ class SiteImportService {
 	 */
 	protected function importNodeProperty(\SimpleXMLElement $nodePropertyXml, NodeInterface $node) {
 		if (!isset($nodePropertyXml['__type'])) {
-			$node->setProperty($nodePropertyXml->getName(), (string)$nodePropertyXml);
-
+			if (count($nodePropertyXml->xpath('value')) > 0) {
+				$propertyValue = array();
+				foreach ($nodePropertyXml->children() as $valueXml) {
+					if (trim((string)$valueXml) === '') {
+						$propertyValue[(string)$valueXml['locale']] = (string)$valueXml->children();
+					} else {
+						$propertyValue[(string)$valueXml['locale']] = (string)$valueXml;
+					}
+				}
+				$node->getNodeData()->setProperty($nodePropertyXml->getName(), $propertyValue);
+			} else {
+				$node->getNodeData()->setProperty($nodePropertyXml->getName(), (string)$nodePropertyXml);
+			}
 			return;
 		}
 		switch ($nodePropertyXml['__type']) {
@@ -341,7 +352,16 @@ class SiteImportService {
 				$node->setProperty($nodePropertyXml->getName(), $referencedNodeIdentifiers);
 				break;
 			case 'object':
-				$node->setProperty($nodePropertyXml->getName(), $this->xmlToObject($nodePropertyXml));
+				if (count($nodePropertyXml->xpath('value')) > 0) {
+					$propertyValue = array();
+					foreach ($nodePropertyXml->children() as $valueXml) {
+						$propertyValue[(string) $valueXml['locale']] = $this->xmlToObject($valueXml, (string)$nodePropertyXml['__classname']);
+					}
+					$node->getNodeData()->setProperty($nodePropertyXml->getName(), $propertyValue);
+				} else {
+					$node->getNodeData()->setProperty($nodePropertyXml->getName(), $this->xmlToObject($nodePropertyXml));
+				}
+
 				break;
 		}
 	}
@@ -371,9 +391,11 @@ class SiteImportService {
 	 * @return object
 	 * @throws DomainException
 	 */
-	protected function xmlToObject(\SimpleXMLElement $objectXml) {
+	protected function xmlToObject(\SimpleXMLElement $objectXml, $className = NULL) {
 		$object = NULL;
-		$className = (string)$objectXml['__classname'];
+		if ($className === NULL) {
+			$className = (string)$objectXml['__classname'];
+		}
 		if (in_array($className, $this->imageVariantClassNames)) {
 			return $this->importImageVariant($objectXml, $className);
 		}
