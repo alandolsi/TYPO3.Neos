@@ -1,6 +1,6 @@
 TYPO3_Neos_Configuration_Version:
   frontend: TYPO3\Flow\Cache\Frontend\StringFrontend
-  backend: TYPO3\Flow\Cache\Backend\FileBackend
+  backend: TYPO3\Flow\Cache\Backend\NullBackend
 
 TYPO3_Neos_TypoScript:
   frontend: TYPO3\Flow\Cache\Frontend\VariableFrontend

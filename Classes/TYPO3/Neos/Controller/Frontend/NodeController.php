@@ -94,9 +94,10 @@ class NodeController extends ActionController {
 			} else {
 				$this->redirect('index', 'Login');
 			}
-		} else {
-			$this->localizationService->getConfiguration()->setCurrentLocale($this->session->getData('locale'));
 		}
+
+		$this->localizationService->getConfiguration()->setCurrentLocale($this->session->getData('locale'));
+
 		if ($locale !== NULL) {
 			$contextProperties['locale'] = new \TYPO3\Flow\I18n\Locale($locale);
 		}
