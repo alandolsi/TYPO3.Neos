@@ -4,10 +4,10 @@
 	<table class="neos-table">
 		<thead>
 			<tr>
-				<th>Name</th>
-				<th>Rootnode name</th>
-				<th>Resource package key</th>
-				<th>State</th>
+				<th><f:translate id="name" /></th>
+				<th><f:translate id="rootnode.name" /></th>
+				<th><f:translate id="resource.package.key" /></th>
+				<th><f:translate id="state" /></th>
 				<th></th>
 			</tr>
 		</thead>
@@ -20,48 +20,48 @@
 					<td>
 						<f:if condition="{site.online}">
 							<f:then>
-								<span class="neos-badge neos-badge-success">Active</span>
+								<span class="neos-badge neos-badge-success"><f:translate id="active" /></span>
 							</f:then>
 							<f:else>
-								<span class="neos-badge neos-badge-important">Inactive</span>
+								<span class="neos-badge neos-badge-important"><f:translate id="inactive" /></span>
 							</f:else>
 						</f:if>
 					</td>
 					<td class="neos-action">
 						<div class="neos-pull-right">
-							<f:link.action action="edit" arguments="{site: site}" class="neos-button neos-button-primary" title="Click to edit">
+							<f:link.action action="edit" arguments="{site: site}" class="neos-button neos-button-primary" title="{f:translate(id: 'click.to.edit', default: 'Click to edit')}">
 								<i class="icon-pencil icon-white"></i>
 							</f:link.action>
 							<f:if condition="{site.state} == 1">
 								<f:then>
 									<f:form action="deactivateSite" arguments="{site: site}" class="neos-inline">
-										<button class="neos-button neos-button-warning" title="Click to deactivate">
+										<button class="neos-button neos-button-warning" title="{f:translate(id: 'click.to.deactivate', default: 'Click to deactivate')}">
 											<i class="icon-minus-sign icon-white"></i>
 										</button>
 									</f:form>
 								</f:then>
 								<f:else>
 									<f:form action="activateSite" arguments="{site: site}" class="neos-inline">
-										<button class="neos-button neos-button-success" title="Click to activate">
+										<button class="neos-button neos-button-success" title="{f:translate(id: 'click.to.activate', default: 'Click to activate')}">
 											<i class="icon-plus-sign icon-white"></i>
 										</button>
 									</f:form>
 								</f:else>
 							</f:if>
-							<button class="neos-button neos-button-danger" title="Click to delete" data-toggle="modal" href="#{site.nodeName}">
+							<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.to.delete.package.key', default: 'Click to delete')}" data-toggle="modal" href="#{site.nodeName}">
 								<i class="icon-trash icon-white"></i>
 							</button>
 							<div class="neos-hide"id="{site.nodeName}">
 								<div class="neos-modal">
 									<div class="neos-modal-header">
 										<button type="button" class="neos-close neos-button" data-dismiss="modal"></button>
-										<div class="neos-header">Do you really want to delete "{site.name}"? This action cannot be undone.</div>
+										<div class="neos-header"><f:translate id="delete.confirmation" /> "{site.name}"? <f:translate id="cannot.be.undone" />.</div>
 									</div>
 									<div class="neos-modal-footer">
-										<a href="#" class="neos-button" data-dismiss="modal">Cancel</a>
+										<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel" /></a>
 										<f:form action="deleteSite" arguments="{site: site}" class="neos-inline">
-											<button class="neos-button neos-button-danger" title="Delete this site">
-												Yes, delete the site
+											<button class="neos-button neos-button-danger" title="{f:translate(id: 'delete.this.site', default: 'Delete this site')}">
+												<f:translate id="yes.delete.the.site" />
 											</button>
 										</f:form>
 									</div>
@@ -75,6 +75,6 @@
 		</tbody>
 	</table>
 	<div class="neos-footer">
-		<f:link.action action="newSite" class="neos-button neos-button-success" title="Click to add a new site">Add new site</f:link.action>
+		<f:link.action action="newSite" class="neos-button neos-button-success" title="{f:translate(id: 'click.add.new.site', default: 'Click to add a new site')}"><f:translate id="add.new.site" /></f:link.action>
 	</div>
 </f:section>

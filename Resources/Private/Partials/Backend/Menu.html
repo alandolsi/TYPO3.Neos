@@ -2,8 +2,8 @@
 <noscript>
 	<div id="neos-menu-panel" class="neos-noscript">
 		<div class="neos-menu-section">
-			<f:link.action package="TYPO3.Neos" controller="Backend\Backend" action="index" title="Content view" class="neos-menu-headline">
-				<i class="icon-file"></i> Content
+			<f:link.action package="TYPO3.Neos" controller="Backend\Backend" action="index" title="{f:translate(id: 'title.content.view', default: 'Content view')}" class="neos-menu-headline">
+				<i class="icon-file"></i> <f:translate id="content" />
 			</f:link.action>
 			<f:if condition="{sites}">
 				<div class="neos-menu-list">

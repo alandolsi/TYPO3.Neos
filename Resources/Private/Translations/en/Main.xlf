@@ -12,9 +12,385 @@
 				<source>Log out</source>
 				<target>Log out</target>
 			</trans-unit>
+			<trans-unit id="following.errors.occurred" xml:space="preserve">
+				<source>The following errors occurred</source>
+				<target>The following errors occurred</target>
+			</trans-unit>
 			<trans-unit id="user.settings" xml:space="preserve">
 				<source>User Settings</source>
 				<target>User Settings</target>
+			</trans-unit>
+			<trans-unit id="username" xml:space="preserve">
+				<source>Username</source>
+				<target>Username</target>
+			</trans-unit>
+			<trans-unit id="password" xml:space="preserve">
+				<source>Password</source>
+				<target>Password</target>
+			</trans-unit>
+			<trans-unit id="repeat.password" xml:space="preserve">
+				<source>Repeat password</source>
+				<target>Repeat password</target>
+			</trans-unit>
+			<trans-unit id="personal.data" xml:space="preserve">
+				<source>Personal Data</source>
+				<target>Personal Data</target>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Title</source>
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="first.name" xml:space="preserve">
+				<source>First Name</source>
+				<target>First Name</target>
+			</trans-unit>
+			<trans-unit id="middle.name" xml:space="preserve">
+				<source>Middle Name</source>
+				<target>Middle Name</target>
+			</trans-unit>
+			<trans-unit id="last.name" xml:space="preserve">
+				<source>Last Name</source>
+				<target>Last Name</target>
+			</trans-unit>
+			<trans-unit id="other.name" xml:space="preserve">
+				<source>Other Name</source>
+				<target>Other Name</target>
+			</trans-unit>
+			<trans-unit id="alias" xml:space="preserve">
+				<source>Alias</source>
+				<target>Alias</target>
+			</trans-unit>
+			<trans-unit id="electronic.addresses" xml:space="preserve">
+				<source>Electronic addresses</source>
+				<target>Electronic addresses</target>
+			</trans-unit>
+			<trans-unit id="type" xml:space="preserve">
+				<source>Type</source>
+				<target>Type</target>
+			</trans-unit>
+			<trans-unit id="usage" xml:space="preserve">
+				<source>Usage</source>
+				<target>Usage</target>
+			</trans-unit>
+			<trans-unit id="identifier" xml:space="preserve">
+				<source>Identifier</source>
+				<target>Identifier</target>
+			</trans-unit>
+			<trans-unit id="primary" xml:space="preserve">
+				<source>Primary</source>
+				<target>Primary</target>
+			</trans-unit>
+			<trans-unit id="click.to.delete.electronic.address" xml:space="preserve">
+				<source>Click here to delete electronic address</source>
+				<target>Click here to delete electronic address</target>
+			</trans-unit>
+			<trans-unit id="delete.confirmation" xml:space="preserve">
+				<source>Do you really want to delete</source>
+				<target>Do you really want to delete</target>
+			</trans-unit>
+			<trans-unit id="cancel" xml:space="preserve">
+				<source>Cancel</source>
+				<target>Cancel</target>
+			</trans-unit>
+			<trans-unit id="title.delete.electronic.address" xml:space="preserve">
+				<source>Delete electronic address</source>
+				<target>Delete electronic address</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.electronic.address" xml:space="preserve">
+				<source>Yes, delete electronic address</source>
+				<target>Yes, delete electronic address</target>
+			</trans-unit>
+			<trans-unit id="click.add.electronic.address" xml:space="preserve">
+				<source>Click to add a new electronic address</source>
+				<target>Click to add a new electronic address</target>
+			</trans-unit>
+			<trans-unit id="add.electronic.address" xml:space="preserve">
+				<source>Add electronic address</source>
+				<target>Add electronic address</target>
+			</trans-unit>
+			<trans-unit id="content" xml:space="preserve">
+				<source>Content</source>
+				<target>Content</target>
+			</trans-unit>
+			<trans-unit id="title.content.view" xml:space="preserve">
+				<source>Content view</source>
+				<target>Content view</target>
+			</trans-unit>
+			<trans-unit id="title.user.menu" xml:space="preserve">
+				<source>User Menu</source>
+				<target>User Menu</target>
+			</trans-unit>
+			<trans-unit id="title.log.out" xml:space="preserve">
+				<source> Log out</source>
+				<target> Log out</target>
+			</trans-unit>
+			<trans-unit id="domain.data" xml:space="preserve">
+				<source>Domain data</source>
+				<target>Domain data</target>
+			</trans-unit>
+			<trans-unit id="host.pattern" xml:space="preserve">
+				<source>Host pattern</source>
+				<target>Host pattern</target>
+			</trans-unit>
+			<trans-unit id="state" xml:space="preserve">
+				<source>State</source>
+				<target>State</target>
+			</trans-unit>
+			<trans-unit id="active" xml:space="preserve">
+				<source>Active</source>
+				<target>Active</target>
+			</trans-unit>
+			<trans-unit id="inactive" xml:space="preserve">
+				<source>Inactive</source>
+				<target>Inactive</target>
+			</trans-unit>
+			<trans-unit id="add.new.electronic.address" xml:space="preserve">
+				<source>Add new electronic address</source>
+				<target>Add new electronic address</target>
+			</trans-unit>
+			<trans-unit id="typo3.neos.error" xml:space="preserve">
+				<source>TYPO3 Neos Error</source>
+				<target>TYPO3 Neos Error</target>
+			</trans-unit>
+			<trans-unit id="go.to.setup" xml:space="preserve">
+				<source>Go to setup</source>
+				<target>Go to setup</target>
+			</trans-unit>
+			<trans-unit id="typo3.neos.login" xml:space="preserve">
+				<source>TYPO3 Neos Login</source>
+				<target>TYPO3 Neos Login</target>
+			</trans-unit>
+			<trans-unit id="typo3.neos" xml:space="preserve">
+				<source>TYPO3 Neos</source>
+				<target>TYPO3 Neos</target>
+			</trans-unit>
+			<trans-unit id="login" xml:space="preserve">
+				<source>Login</source>
+				<target>Login</target>
+			</trans-unit>
+			<trans-unit id="free.software" xml:space="preserve">
+				<source>This is free software, licensed under GPL3 or higher, and you are welcome to redistribute it under certain conditions</source>
+				<target>This is free software, licensed under GPL3 or higher, and you are welcome to redistribute it under certain conditions</target>
+			</trans-unit>
+			<trans-unit id="click.for.details" xml:space="preserve">
+				<source>click for details.</source>
+				<target>click for details.</target>
+			</trans-unit>
+			<trans-unit id="typo3.neos.no.warranty" xml:space="preserve">
+				<source>TYPO3 Neos comes with ABSOLUTELY NO WARRANTY;</source>
+				<target>TYPO3 Neos comes with ABSOLUTELY NO WARRANTY;</target>
+			</trans-unit>
+			<trans-unit id="click.for.details" xml:space="preserve">
+				<source>click for details.</source>
+				<target>click for details.</target>
+			</trans-unit>
+			<trans-unit id="see" xml:space="preserve">
+				<source>See</source>
+				<target>See</target>
+			</trans-unit>
+			<trans-unit id="for.more.details" xml:space="preserve">
+				<source>for more details.</source>
+				<target>for more details.</target>
+			</trans-unit>
+			<trans-unit id="obstructing.the.appearance" xml:space="preserve">
+				<source>Obstructing the appearance of this notice is prohibited by law.</source>
+				<target>Obstructing the appearance of this notice is prohibited by law.</target>
+			</trans-unit>
+			<trans-unit id="available.packages" xml:space="preserve">
+				<source>Available packages</source>
+				<target>Available packages</target>
+			</trans-unit>
+			<trans-unit id="package.name" xml:space="preserve">
+				<source>Package Name</source>
+				<target>Package Name</target>
+			</trans-unit>
+			<trans-unit id="version" xml:space="preserve">
+				<source>Version</source>
+				<target>Version</target>
+			</trans-unit>
+			<trans-unit id="package.key" xml:space="preserve">
+				<source>Package Key</source>
+				<target>Package Key</target>
+			</trans-unit>
+			<trans-unit id="package.type" xml:space="preserve">
+				<source>Package Type</source>
+				<target>Package Type</target>
+			</trans-unit>
+			<trans-unit id="obstructing.the.appearance" xml:space="preserve">
+				<source>Obstructing the appearance of this notice is prohibited by law.</source>
+				<target>Obstructing the appearance of this notice is prohibited by law.</target>
+			</trans-unit>
+			<trans-unit id="package.currently.frozen" xml:space="preserve">
+				<source>This package is currently frozen. Click here to unfreeze it.</source>
+				<target>This package is currently frozen. Click here to unfreeze it.</target>
+			</trans-unit>
+			<trans-unit id="freeze.the.package" xml:space="preserve">
+				<source>Click here to freeze the package in order to speed up your website.</source>
+				<target>Click here to freeze the package in order to speed up your website.</target>
+			</trans-unit>
+			<trans-unit id="package.is.protected" xml:space="preserve">
+				<source>This package is protected and cannot be deactivated.</source>
+				<target>This package is protected and cannot be deactivated.</target>
+			</trans-unit>
+			<trans-unit id="click.to.deactivate" xml:space="preserve">
+				<source>Click to deactivate</source>
+				<target>Click to deactivate</target>
+			</trans-unit>
+			<trans-unit id="click.to.activate" xml:space="preserve">
+				<source>Click to activate</source>
+				<target>Click to activate</target>
+			</trans-unit>
+			<trans-unit id="cannot.be.deleted" xml:space="preserve">
+				<source>This package is protected and cannot be deleted.</source>
+				<target>This package is protected and cannot be deleted.</target>
+			</trans-unit>
+			<trans-unit id="click.to.delete.package.key" xml:space="preserve">
+				<source>Click to delete</source>
+				<target>Click to delete</target>
+			</trans-unit>
+			<trans-unit id="delete" xml:space="preserve">
+				<source>Delete</source>
+				<target>Delete</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.the.package" xml:space="preserve">
+				<source>Yes, delete the package</source>
+				<target>Yes, delete the package</target>
+			</trans-unit>
+			<trans-unit id="freeze" xml:space="preserve">
+				<source>Freeze</source>
+				<target>Freeze</target>
+			</trans-unit>
+			<trans-unit id="selected" xml:space="preserve">
+				<source>selected</source>
+				<target>selected</target>
+			</trans-unit>
+			<trans-unit id="packages" xml:space="preserve">
+				<source>packages</source>
+				<target>packages</target>
+			</trans-unit>
+			<trans-unit id="unfreeze" xml:space="preserve">
+				<source>Unfreeze</source>
+				<target>Unfreeze</target>
+			</trans-unit>
+			<trans-unit id="deactivate" xml:space="preserve">
+				<source>Deactivate</source>
+				<target>Deactivate</target>
+			</trans-unit>
+			<trans-unit id="activate" xml:space="preserve">
+				<source>Activate</source>
+				<target>Activate</target>
+			</trans-unit>
+			<trans-unit id="delete.selected.packages" xml:space="preserve">
+				<source>Do you really want to delete the selected packages? This action cannot be undone.</source>
+				<target>Do you really want to delete the selected packages? This action cannot be undone.</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.them" xml:space="preserve">
+				<source>Yes, delete them</source>
+				<target>Yes, delete them</target>
+			</trans-unit>
+			<trans-unit id="site" xml:space="preserve">
+				<source>Site</source>
+				<target>Site</target>
+			</trans-unit>
+			<trans-unit id="root.node.name" xml:space="preserve">
+				<source>Root node name</source>
+				<target>Root node name</target>
+			</trans-unit>
+			<trans-unit id="name" xml:space="preserve">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="domains" xml:space="preserve">
+				<source>Domains</source>
+				<target>Domains</target>
+			</trans-unit>
+			<trans-unit id="domain" xml:space="preserve">
+				<source>Domain</source>
+				<target>Domain</target>
+			</trans-unit>
+			<trans-unit id="status" xml:space="preserve">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="click.to.edit" xml:space="preserve">
+				<source>Click to edit</source>
+				<target>Click to edit</target>
+			</trans-unit>
+			<trans-unit id="want.to.delete" xml:space="preserve">
+				<source>Do you really want to delete</source>
+				<target>Do you really want to delete</target>
+			</trans-unit>
+			<trans-unit id="cannot.be.undone" xml:space="preserve">
+				<source>This action cannot be undone</source>
+				<target>This action cannot be undone</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.it" xml:space="preserve">
+				<source>Yes, delete it</source>
+				<target>Yes, delete it</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.domain" xml:space="preserve">
+				<source>Yes, delete the domain</source>
+				<target>Yes, delete the domain</target>
+			</trans-unit>
+			<trans-unit id="click.create.new.domain" xml:space="preserve">
+				<source>Click to create a new domain</source>
+				<target>Click to create a new domain</target>
+			</trans-unit>
+			<trans-unit id="add.domain" xml:space="preserve">
+				<source>Add domain</source>
+				<target>Add domain</target>
+			</trans-unit>
+			<trans-unit id="site.package" xml:space="preserve">
+				<source>Site package</source>
+				<target>Site package</target>
+			</trans-unit>
+			<trans-unit id="description" xml:space="preserve">
+				<source>Description</source>
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="click.delete.this.site" xml:space="preserve">
+				<source>Click here to delete this site</source>
+				<target>Click here to delete this site</target>
+			</trans-unit>
+			<trans-unit id="delete.this.site" xml:space="preserve">
+				<source>Delete this site</source>
+				<target>Delete this site</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.the.site" xml:space="preserve">
+				<source>Yes, delete the site</source>
+				<target>Yes, delete the site</target>
+			</trans-unit>
+			<trans-unit id="deactivate.site" xml:space="preserve">
+				<source>Deactivate site</source>
+				<target>Deactivate site</target>
+			</trans-unit>
+			<trans-unit id="activate.site" xml:space="preserve">
+				<source>Activate site</source>
+				<target>Activate site</target>
+			</trans-unit>
+			<trans-unit id="edit.domain" xml:space="preserve">
+				<source>Edit domain</source>
+				<target>Edit domain</target>
+			</trans-unit>
+			<trans-unit id="rootnode.name" xml:space="preserve">
+				<source>Rootnode name</source>
+				<target>Rootnode name</target>
+			</trans-unit>
+			<trans-unit id="resource.package.key" xml:space="preserve">
+				<source>Resource package key</source>
+				<target>Resource package key</target>
+			</trans-unit>
+			<trans-unit id="click.add.new.site" xml:space="preserve">
+				<source>Click to add a new site</source>
+				<target>Click to add a new site</target>
+			</trans-unit>Add new site
+			<trans-unit id="add.new.site" xml:space="preserve">
+				<source>Add new site</source>
+				<target>Add new site</target>
+			</trans-unit>
+			<trans-unit id="new.domain" xml:space="preserve">
+				<source>New domain</source>
+				<target>New domain</target>
 			</trans-unit>
 		</body>
 	</file>

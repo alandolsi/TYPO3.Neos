@@ -1,7 +1,7 @@
 <f:layout name="Default" />
 
 <f:section name="head">
-	<title>TYPO3 Neos Login</title>
+	<title><f:translate id="typo3.neos.login" /></title>
 	<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Login.css')}" />
 	<script src="{f:uri.resource(path: 'Library/jquery/jquery-1.10.2.js')}"></script>
 	<script src="{f:uri.resource(path: 'Library/jquery-ui/js/jquery-ui-1.10.3.custom.js')}"></script>
@@ -11,22 +11,22 @@
 	<body class="neos">
 		<div id="neos-login-box">
 			<div class="neos-login-logo">
-				<img src="{f:uri.resource(path: 'Images/Login/ApplicationLogo.png')}" alt="TYPO3 Neos" />
+				<img src="{f:uri.resource(path: 'Images/Login/ApplicationLogo.png')}" alt="{f:translate(id: 'typo3.neos', default: 'TYPO3 Neos')}" />
 			</div>
 			<div class="neos-login-body neos">
 				<f:form name="login" action="authenticate">
 					<f:form.hidden name="lastVisitedNode" />
 					<fieldset>
 						<div class="neos-controls">
-							<f:form.textfield id="username" type="text" placeholder="Username" class="neos-span12" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" additionalAttributes="{autofocus: 'autofocus'}" value="{username}" />
+							<f:form.textfield id="username" type="text" placeholder="{f:translate(id: 'username', default: 'Username')}" class="neos-span12" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" additionalAttributes="{autofocus: 'autofocus'}" value="{username}" />
 						</div>
 						<div class="neos-controls">
-							<f:form.textfield id="password" type="password" placeholder="Password" class="neos-span12" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
+							<f:form.textfield id="password" type="password" placeholder="{f:translate(id: 'password', default: 'Password')}" class="neos-span12" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
 						</div>
 						<div class="neos-actions">
 							<!-- Forgot password link will be here -->
 							<f:form.button type="submit" class="neos-span5 neos-pull-right neos-button neos-button-primary neos-button-warning neos-login-btn">
-								Login
+								<f:translate id="login" />
 							</f:form.button>
 							<f:flashMessages as="flashMessages">
 								<f:for each="{flashMessages}" as="flashMessage">
@@ -54,11 +54,11 @@
 		</div>
 		<div id="neos-login-footer">
 			<p>
-				<a href="http://neos.typo3.org" target="_blank">TYPO3 Neos</a> – © 2006-<f:format.date format="Y" date="now" />
-				This is free software, licensed under GPL3 or higher, and you are welcome to redistribute it under certain conditions; <a href="http://typo3.org/licenses" target="_blank">click for details.</a>
-				TYPO3 Neos comes with ABSOLUTELY NO WARRANTY; <a href="http://typo3.org/licenses" target="_blank">click for details.</a>
-				See <a href="http://neos.typo3.org" target="_blank">neos.typo3.org</a> for more details.
-				Obstructing the appearance of this notice is prohibited by law.
+				<a href="http://neos.typo3.org" target="_blank"><f:translate id="typo3.neos" /></a> – © 2006-<f:format.date format="Y" date="now" />
+				<f:translate id="free.software" />; <a href="http://typo3.org/licenses" target="_blank"> <f:translate id="click.for.details" /></a>
+				<f:translate id="typo3.neos.no.warranty" /> <a href="http://typo3.org/licenses" target="_blank"><f:translate id="click.for.details" /></a>
+				<f:translate id="see" /> <a href="http://neos.typo3.org" target="_blank">neos.typo3.org</a> <f:translate id="for.more.details" />
+				<f:translate id="obstructing.the.appearance" />
 			</p>
 		</div>
 		<script src="{f:uri.resource(path: '2/js/bootstrap.min.js', package: 'TYPO3.Twitter.Bootstrap')}"></script>
