@@ -392,6 +392,222 @@
 				<source>New domain</source>
 				<target>New domain</target>
 			</trans-unit>
+			<trans-unit id="new.site" xml:space="preserve">
+				<source>New site</source>
+				<target>New site</target>
+			</trans-unit>
+			<trans-unit id="import.a.site" xml:space="preserve">
+				<source>Import a site</source>
+				<target>Import a site</target>
+			</trans-unit>
+			<trans-unit id="select.a.site" xml:space="preserve">
+				<source>Select a site</source>
+				<target>Select a site</target>
+			</trans-unit>
+			<trans-unit id="no.site.package.available" xml:space="preserve">
+				<source>No site packages are available. Make sure you have an active site package</source>
+				<target>No site packages are available. Make sure you have an active site package</target>
+			</trans-unit>
+			<trans-unit id="create.a.blank.site" xml:space="preserve">
+				<source>Create a blank site</source>
+				<target>Create a blank site</target>
+			</trans-unit>
+			<trans-unit id="valid.package.key.in.form" xml:space="preserve">
+				<source>A valid package key should be in the form </source>
+				<target>A valid package key should be in the form </target>
+			</trans-unit>
+			<trans-unit id="site.name" xml:space="preserve">
+				<source>Site Name</source>
+				<target>Site Name</target>
+			</trans-unit>
+			<trans-unit id="the" xml:space="preserve">
+				<source>The </source>
+				<target>The </target>
+			</trans-unit>
+			<trans-unit id="neos.kickstarter" xml:space="preserve">
+				<source>Neos Kickstarter</source>
+				<target>Neos Kickstarter</target>
+			</trans-unit>
+			<trans-unit id="package.not.installed.install" xml:space="preserve">
+				<source> package is not installed, install it to kickstart new sites.</source>
+				<target> package is not installed, install it to kickstart new sites.</target>
+			</trans-unit>
+			<trans-unit id="edit.user" xml:space="preserve">
+				<source>Edit user </source>
+				<target>Edit user </target>
+			</trans-unit>
+			<trans-unit id="user.data" xml:space="preserve">
+				<source>User Data</source>
+				<target>User Data</target>
+			</trans-unit>
+			<trans-unit id="role" xml:space="preserve">
+				<source>Role</source>
+				<target>Role</target>
+			</trans-unit>
+			<trans-unit id="roles" xml:space="preserve">
+				<source>Roles</source>
+				<target>Roles</target>
+			</trans-unit>
+			<trans-unit id="view.user" xml:space="preserve">
+				<source>View user</source>
+				<target>View user</target>
+			</trans-unit>
+			<trans-unit id="cannot.delete.yourself" xml:space="preserve">
+				<source>You are logged in as this user and you cannot delete yourself.</source>
+				<target>You are logged in as this user and you cannot delete yourself.</target>
+			</trans-unit>
+			<trans-unit id="want.to.delete.user" xml:space="preserve">
+				<source>Do you really want to delete user </source>
+				<target>Do you really want to delete user </target>
+			</trans-unit>
+			<trans-unit id="delete.user.personal.workspace" xml:space="preserve">
+				<source>This will delete the user and his personal workspace, including all unpublished content.</source>
+				<target>This will delete the user and his personal workspace, including all unpublished content.</target>
+			</trans-unit>
+			<trans-unit id="operation.cannot.be.undone" xml:space="preserve">
+				<source>This operation cannot be undone.</source>
+				<target>This operation cannot be undone.</target>
+			</trans-unit>
+			<trans-unit id="delete.user" xml:space="preserve">
+				<source>Delete User</source>
+				<target>Delete User</target>
+			</trans-unit>
+			<trans-unit id="yes.delete.user" xml:space="preserve">
+				<source>Yes, delete the user</source>
+				<target>Yes, delete the user</target>
+			</trans-unit>
+			<trans-unit id="create.new.user" xml:space="preserve">
+				<source>Create new user</source>
+				<target>Create new user</target>
+			</trans-unit>
+			<trans-unit id="create.a.new.user" xml:space="preserve">
+				<source>Create a new user</source>
+				<target>Create a new user</target>
+			</trans-unit>
+			<trans-unit id="details.for.user" xml:space="preserve">
+				<source>Details for user</source>
+				<target>Details for user</target>
+			</trans-unit>
+			<trans-unit id="creation.date" xml:space="preserve">
+				<source>Creation date</source>
+				<target>Creation date</target>
+			</trans-unit>
+			<trans-unit id="back" xml:space="preserve">
+				<source>Back</source>
+				<target>Back</target>
+			</trans-unit>
+			<trans-unit id="click.delete.this.user" xml:space="preserve">
+				<source>Click here to delete this user</source>
+				<target>Click here to delete this user</target>
+			</trans-unit>
+			<trans-unit id="unpublished.changes" xml:space="preserve">
+				<source>Unpublished changes</source>
+				<target>Unpublished changes</target>
+			</trans-unit>
+			<trans-unit id="label" xml:space="preserve">
+				<source>Label</source>
+				<target>Label</target>
+			</trans-unit>
+			<trans-unit id="node.type" xml:space="preserve">
+				<source>Node type</source>
+				<target>Node type</target>
+			</trans-unit>
+			<trans-unit id="relative.path" xml:space="preserve">
+				<source>Relative path</source>
+				<target>Relative path</target>
+			</trans-unit>
+			<trans-unit id="path" xml:space="preserve">
+				<source>Path</source>
+				<target>Path</target>
+			</trans-unit>
+			<trans-unit id="deleted" xml:space="preserve">
+				<source>deleted</source>
+				<target>deleted</target>
+			</trans-unit>
+			<trans-unit id="created" xml:space="preserve">
+				<source>created</source>
+				<target>created</target>
+			</trans-unit>
+			<trans-unit id="moved" xml:space="preserve">
+				<source>moved</source>
+				<target>moved</target>
+			</trans-unit>
+			<trans-unit id="hidden" xml:space="preserve">
+				<source>hidden</source>
+				<target>hidden</target>
+			</trans-unit>
+			<trans-unit id="edited" xml:space="preserve">
+				<source>edited</source>
+				<target>edited</target>
+			</trans-unit>
+			<trans-unit id="no.title" xml:space="preserve">
+				<source>No title</source>
+				<target>No title</target>
+			</trans-unit>
+			<trans-unit id="publish" xml:space="preserve">
+				<source>Publish</source>
+				<target>Publish</target>
+			</trans-unit>
+			<trans-unit id="discard" xml:space="preserve">
+				<source>Discard</source>
+				<target>Discard</target>
+			</trans-unit>
+			<trans-unit id="legend" xml:space="preserve">
+				<source>Legend</source>
+				<target>Legend</target>
+			</trans-unit>
+			<trans-unit id="unpublished.changes.in.workspace" xml:space="preserve">
+				<source>There are no unpublished changes in this workspace</source>
+				<target>There are no unpublished changes in this workspace</target>
+			</trans-unit>
+			<trans-unit id="want.to.discard.changes" xml:space="preserve">
+				<source>Do you really want to discard all changes in the </source>
+				<target>Do you really want to discard all changes in the </target>
+			</trans-unit>
+			<trans-unit id="workspace" xml:space="preserve">
+				<source>workspace</source>
+				<target>workspace</target>
+			</trans-unit>
+			<trans-unit id="discard.all.changes" xml:space="preserve">
+				<source>Discard all changes</source>
+				<target>Discard all changes</target>
+			</trans-unit>
+			<trans-unit id="changes" xml:space="preserve">
+				<source> changes</source>
+				<target> changes</target>
+			</trans-unit>
+			<trans-unit id="all" xml:space="preserve">
+				<source>all</source>
+				<target>all</target>
+			</trans-unit>
+			<trans-unit id="raw.content.mode" xml:space="preserve">
+				<source>Raw Content Mode</source>
+				<target>Raw Content Mode</target>
+			</trans-unit>
+			<trans-unit id="shortcut.to.specific.page" xml:space="preserve">
+				<source>This is a shortcut to a specific page.</source>
+				<target>This is a shortcut to a specific page.</target>
+			</trans-unit>
+			<trans-unit id="click" xml:space="preserve">
+				<source>Click </source>
+				<target>Click </target>
+			</trans-unit>
+			<trans-unit id="here" xml:space="preserve">
+				<source>here</source>
+				<target>here</target>
+			</trans-unit>
+			<trans-unit id="to.continue.the.page" xml:space="preserve">
+				<source> to continue to the page.</source>
+				<target> to continue to the page.</target>
+			</trans-unit>
+			<trans-unit id="shortcut.to.first.child.page" xml:space="preserve">
+				<source>This is a shortcut to the first child page.</source>
+				<target>This is a shortcut to the first child page.</target>
+			</trans-unit>
+			<trans-unit id="shortcut.to.parent.page" xml:space="preserve">
+				<source>This is a shortcut to the parent page.</source>
+				<target>This is a shortcut to the parent page.</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -5,9 +5,9 @@
 		<table class="neos-table">
 			<thead>
 				<tr>
-					<th>Username</th>
-					<th>Name</th>
-					<th>Roles</th>
+					<th><f:translate id="username">Username</f:translate></th>
+					<th><f:translate id="name">Name</f:translate></th>
+					<th><f:translate id="roles">Roles</f:translate></th>
 					<th>&nbsp;</th>
 				</tr>
 			</thead>
@@ -20,37 +20,37 @@
 					</td>
 					<td class="neos-action">
 						<div class="neos-pull-right">
-							<f:link.action action="show" arguments="{account: account}" class="neos-button neos-button-primary" title="View user">
+							<f:link.action action="show" arguments="{account: account}" class="neos-button neos-button-primary" title="{f:translate(id: 'view.user', default: 'View user')}">
 								<i class="icon-info-sign icon-white"></i>
 							</f:link.action>
-							<f:link.action action="edit" arguments="{account: account}" class="neos-button neos-button-primary" title="Edit user">
+							<f:link.action action="edit" arguments="{account: account}" class="neos-button neos-button-primary" title="{f:translate(id: 'edit.user', default: 'Edit user')}">
 								<i class="icon-pencil icon-white"></i>
 							</f:link.action>
 
 							<f:if condition="{currentAccount} == {account}">
 								<f:then>
-									<button class="neos-button neos-button-danger neos-disabled" title="You are logged in as this user and you cannot delete yourself."><i class="icon-trash icon-white"></i></button>
+									<button class="neos-button neos-button-danger neos-disabled" title="{f:translate(id: 'cannot.delete.yourself', default: 'You are logged in as this user and you cannot delete yourself.')}"><i class="icon-trash icon-white"></i></button>
 								</f:then>
 								<f:else>
-									<button class="neos-button neos-button-danger" title="Click to delete" data-toggle="modal" href="#{flowidentifier}">
+									<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.to.delete.package.key', default: 'Click to delete')}" data-toggle="modal" href="#{flowidentifier}">
 										<i class="icon-trash icon-white"></i>
 									</button>
 									<div class="neos-hide" id="{flowidentifier}">
 										<div class="neos-modal">
 											<div class="neos-modal-header">
 												<button type="button" class="neos-close neos-button" data-dismiss="modal"></button>
-												<div class="neos-header">Do you really want to delete user "{account.accountIdentifier}"?</div>
+												<div class="neos-header"><f:translate id="want.to.delete.user">Do you really want to delete user</f:translate> "{account.accountIdentifier}"?</div>
 												<div>
 													<div class="neos-subheader">
-														<p>This will delete the user and his personal workspace, including all unpublished content.<br />This operation cannot be undone.</p>
+														<p><f:translate id="delete.user.personal.workspace">This will delete the user and his personal workspace, including all unpublished content.</f:translate><br /><f:translate id="operation.cannot.be.undone">This operation cannot be undone.</f:translate></p>
 													</div>
 												</div>
 											</div>
 											<div class="neos-modal-footer">
-												<a href="#" class="neos-button" data-dismiss="modal">Cancel</a>
+												<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel">Cancel</f:translate></a>
 												<f:form action="delete" arguments="{account: account}" class="neos-inline">
-													<button type="submit" class="neos-button neos-button-danger" title="Delete User">
-														Yes, delete the user
+													<button type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'delete.user', default: 'Delete User')}">
+														<f:translate id="want.to.delete.user">Yes, delete the user</f:translate>
 													</button>
 												</f:form>
 											</div>
@@ -66,6 +66,6 @@
 		</table>
 	</div>
 	<div class="neos-footer">
-		<f:link.action action="new" class="neos-button neos-button-primary" title="Create new user">Create new user</f:link.action>
+		<f:link.action action="new" class="neos-button neos-button-primary" title="{f:translate(id: 'create.new.user', default: 'Create new user')}"><f:translate id="create.new.user">Create new user</f:translate></f:link.action>
 	</div>
 </f:section>

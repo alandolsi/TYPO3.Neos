@@ -2,38 +2,38 @@
 
 <f:section name="subtitle">
 	<div class="neos-module-container">
-		<h2>Edit user "{account.accountIdentifier}"</h2>
+		<h2><f:translate id="edit.user">Edit user </f:translate>"{account.accountIdentifier}"</h2>
 	</div>
 </f:section>
 <f:section name="content">
 	<f:form action="update" name="person" object="{person}" arguments="{account: account}" class="user user-edit">
 		<div class="neos-row-fluid neos-module-container">
 			<fieldset class="neos-span5">
-				<legend>User Data</legend>
+				<legend><f:translate id="user.data">User Data</f:translate></legend>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label">Username</label>
+					<label class="neos-control-label"><f:translate id="username">Username</f:translate></label>
 					<div class="neos-controls">
 						<span class="neos-span12 neos-uneditable-input">{account.accountIdentifier}</span>
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="password[0]">Password</label>
+					<label class="neos-control-label" for="password[0]"><f:translate id="password">Password</f:translate></label>
 					<div class="neos-controls">
 						<f:form.password name="password[0]" id="password[0]" class="neos-span12" />
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="password[1]">Repeat password</label>
+					<label class="neos-control-label" for="password[1]"><f:translate id="repeat.password">Repeat password</f:translate></label>
 					<div class="neos-controls">
 						<f:form.password name="password[1]" id="password[1]" class="neos-span12" />
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="roleIdentifier">Role</label>
+					<label class="neos-control-label" for="roleIdentifier"><f:translate id="role">Role</f:translate></label>
 					<div class="neos-controls">
 						<f:for each="{neosRoles}" as="role">
 							<label class="neos-radio neos-inline">
@@ -46,46 +46,46 @@
 			</fieldset>
 
 			<fieldset class="neos-span5 neos-offset1">
-				<legend>Personal Data</legend>
+				<legend><f:translate id="personal.data">Personal Data</f:translate></legend>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="title">Title</label>
+					<label class="neos-control-label" for="title"><f:translate id="title">Title</f:translate></label>
 					<div class="neos-controls neos-controls-row">
 						<f:form.textfield property="name.title" id="title" class="neos-span12" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="neos-control-group neos-span7">
-						<label class="neos-control-label" for="firstName">First Name</label>
+						<label class="neos-control-label" for="firstName"><f:translate id="first.name">First Name</f:translate></label>
 						<div class="neos-controls neos-controls-row">
-							<f:form.textfield property="name.firstName" id="firstName" placeholder="First Name" class="neos-span12" />
+							<f:form.textfield property="name.firstName" id="firstName" placeholder="{f:translate(id: 'first.name', default: 'First Name')}" class="neos-span12" />
 						</div>
 					</div>
 
 					<div class="neos-control-group neos-span5">
 						<label class="neos-control-label" for="middleName">&nbsp;</label>
 						<div class="neos-controls neos-controls-row">
-							<f:form.textfield property="name.middleName" id="middleName" placeholder="Middle Name" class="neos-span12" />
+							<f:form.textfield property="name.middleName" id="middleName" placeholder="{f:translate(id: 'middle.name', default: 'Middle Name')}" class="neos-span12" />
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="neos-control-group neos-span7">
-						<label class="neos-control-label" for="lastName">Last Name</label>
+						<label class="neos-control-label" for="lastName"><f:translate id="last.name">Last Name</f:translate></label>
 						<div class="neos-controls neos-controls-row">
-							<f:form.textfield property="name.lastName" id="lastName" placeholder="Last Name" class="neos-span12" />
+							<f:form.textfield property="name.lastName" id="lastName" placeholder="{f:translate(id: 'last.name', default: 'Last Name')}" class="neos-span12" />
 						</div>
 					</div>
 
 					<div class="neos-control-group neos-span5">
 						<label class="neos-control-label" for="otherName">&nbsp;</label>
 						<div class="neos-controls neos-controls-row">
-							<f:form.textfield property="name.otherName" id="otherName" placeholder="Other Name" class="neos-span12" />
+							<f:form.textfield property="name.otherName" id="otherName" placeholder="{f:translate(id: 'other.name', default: 'Other Name')}" class="neos-span12" />
 						</div>
 					</div>
 				</div>
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="alias">Alias</label>
+					<label class="neos-control-label" for="alias"><f:translate id="alias">Alias</f:translate></label>
 					<div class="neos-controls">
 						<f:form.textfield property="name.alias" id="alias" class="neos-span12" />
 					</div>
@@ -96,15 +96,15 @@
 		</div>
 		<div class="neos-row-fluid">
 			<fieldset class="neos-span11">
-				<legend>Electronic addresses</legend>
+				<legend><f:translate id="electronic.addresses">Electronic addresses</f:translate></legend>
 				<div class="neos-control-group">
 					<table class="neos-table" id="electronicAddresses">
 						<thead>
 						<tr>
-							<th>Type</th>
-							<th>Usage</th>
-							<th>Identifier</th>
-							<th class="neos-aCenter">Primary</th>
+							<th><f:translate id="type">Type</f:translate></th>
+							<th><f:translate id="usage">Usage</f:translate></th>
+							<th><f:translate id="identifier">Identifier</f:translate></th>
+							<th class="neos-aCenter"><f:translate id="primary">Primary</f:translate></th>
 							<th></th>
 						</tr>
 						</thead>
@@ -130,18 +130,18 @@
 								</td>
 								<td class="neos-action">
 									<div class="neos-pull-right">
-										<button class="neos-button neos-button-danger" title="Click to delete" data-toggle="modal" href="#{electronicAddress.type}">
+										<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.to.delete.package.key', default: 'Click to delete')}" data-toggle="modal" href="#{electronicAddress.type}">
 											<i class="icon-trash icon-white"></i>
 										</button>
 										<div class="neos-hide" id="{electronicAddress.type}">
 											<div class="neos-modal">
 												<div class="neos-modal-header">
 													<button type="button" class="neos-close neos-button" data-dismiss="modal"></button>
-													<div class="neos-header">Do you really want to delete "{electronicAddress.type} ({electronicAddress.identifier})"?</div>
+													<div class="neos-header"><f:translate id="want.to.delete">Do you really want to delete</f:translate> "{electronicAddress.type} ({electronicAddress.identifier})"?</div>
 												</div>
 												<div class="neos-modal-footer">
 													<a href="#" class="neos-button" data-dismiss="modal">Cancel</a>
-													<button form="postHelper" formaction="{f:uri.action(action: 'deleteElectronicAddress', arguments: '{account: account, electronicAddress: electronicAddress}')}" type="submit" class="neos-button neos-button-danger" title="Delete">Yes, delete electronic address</button>
+													<button form="postHelper" formaction="{f:uri.action(action: 'deleteElectronicAddress', arguments: '{account: account, electronicAddress: electronicAddress}')}" type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'delete', default: 'Delete')}"><f:translate id="yes.delete.electronic.address">Yes, delete electronic address</f:translate></button>
 												</div>
 											</div>
 											<div class="neos-modal-backdrop neos-in"></div>
@@ -153,7 +153,7 @@
 						</tbody>
 					</table>
 					<div class="neos-pull-right">
-						<f:link.action action="newElectronicAddress" arguments="{account: account}" class="neos-button" title="Click to add a new Electronic address">Add electronic address</f:link.action>
+						<f:link.action action="newElectronicAddress" arguments="{account: account}" class="neos-button" title="{f:translate(id: 'click.add.electronic.address', default: 'Click to add a new Electronic address')}"><f:translate id="add.electronic.address">Add electronic address</f:translate></f:link.action>
 					</div>
 				</div>
 
@@ -161,7 +161,7 @@
 		</div>
 
 		<div class="neos-footer">
-			<f:link.action action="index" class="neos-button">Cancel</f:link.action>
+			<f:link.action action="index" class="neos-button"><f:translate id="cancel">Cancel</f:translate></f:link.action>
 			<f:form.submit value="Save user" class="neos-button neos-button-primary" />
 		</div>
 	</f:form>

@@ -1,38 +1,38 @@
 <f:layout name="BackendSubModule" />
 
 <f:section name="subtitle">
-	<h2>Create a new user</h2>
+	<h2><f:translate id="create.a.new.user">Create a new user</f:translate></h2>
 </f:section>
 
 <f:section name="content">
 	<f:form action="create" class="user user-edit" name="account">
 		<div class="neos-row-fluid">
 			<fieldset class="neos-span5">
-				<legend>User data</legend>
+				<legend><f:translate id="user.data">User data</f:translate></legend>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="identifier">Username</label>
+					<label class="neos-control-label" for="identifier"><f:translate id="username">Username</f:translate></label>
 					<div class="neos-controls">
 						<f:form.textfield name="identifier" id="identifier" class="neos-span12" />
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="password[0]">Password</label>
+					<label class="neos-control-label" for="password[0]"><f:translate id="password">Password</f:translate></label>
 					<div class="neos-controls">
 						<f:form.password name="password[0]" id="password[0]" class="neos-span12" />
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="password[1]">Repeat password</label>
+					<label class="neos-control-label" for="password[1]"><f:translate id="repeat.password">Repeat password</f:translate></label>
 					<div class="neos-controls">
 						<f:form.password name="password[1]" id="password[1]" class="neos-span12" />
 					</div>
 				</div>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="roleIdentifier">Role</label>
+					<label class="neos-control-label" for="roleIdentifier"><f:translate id="role">Role</f:translate></label>
 					<div class="neos-controls">
 						<f:for each="{neosRoles}" as="role">
 							<label class="neos-radio neos-inline">
@@ -45,16 +45,16 @@
 			</fieldset>
 
 			<fieldset class="neos-span5 neos-offset1">
-				<legend>Personal Data</legend>
+				<legend><f:translate id="personal.data">Personal Data</f:translate></legend>
 
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="firstName">First Name</label>
+					<label class="neos-control-label" for="firstName"><f:translate id="first.name">First Name</f:translate></label>
 					<div class="neos-controls">
 							<f:form.textfield name="firstName" id="firstName" class="neos-span12" />
 					</div>
 				</div>
 				<div class="neos-control-group">
-					<label class="neos-control-label" for="lastName">Last Name</label>
+					<label class="neos-control-label" for="lastName"><f:translate id="last.name">Last Name</f:translate></label>
 					<div class="neos-controls">
 							<f:form.textfield name="lastName" id="lastName" class="neos-span12" />
 					</div>
@@ -63,7 +63,7 @@
 		</div>
 
 		<div class="neos-footer">
-			<f:link.action action="index" class="neos-button">Cancel</f:link.action>
+			<f:link.action action="index" class="neos-button"><f:translate id="cancel">Cancel</f:translate></f:link.action>
 			<f:form.submit value="Save user" class="neos-button neos-button-primary" />
 		</div>
 	</f:form>
