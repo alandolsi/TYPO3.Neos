@@ -9,39 +9,39 @@
 		<fieldset>
 			<div class="neos-row-fluid">
 				<fieldset class="neos-span5">
-					<legend><f:translate id="site" /></legend>
+					<legend><f:translate id="site">Site</f:translate></legend>
 					<div class="neos-control-group">
-						<label class="neos-control-label" for="name"><f:translate id="name" /></label>
+						<label class="neos-control-label" for="name"><f:translate id="name">Name</f:translate></label>
 						<div class="neos-controls">
 							<f:form.textfield property="name" id="name" class="neos-span12" />
 						</div>
 					</div>
 					<div class="neos-control-group">
-						<label class="neos-control-label" for="node-name"><f:translate id="root.node.name" /></label>
+						<label class="neos-control-label" for="node-name"><f:translate id="root.node.name">Root node name</f:translate></label>
 						<div class="neos-controls">
 							<f:form.textfield property="nodeName" id="node-name" value="{site.nodeName}" class="neos-span12" />
 							<f:form.hidden name="originalNodeName" value="{site.nodeName}" />
 						</div>
 					</div>
 					<p>
-						<label><f:translate id="state" /></label>
+						<label><f:translate id="state">State</f:translate></label>
 						<f:if condition="{site.online}">
 							<f:then>
-								<span class="neos-badge neos-badge-success"><f:translate id="active" /></span>
+								<span class="neos-badge neos-badge-success"><f:translate id="active">Active</f:translate></span>
 							</f:then>
 							<f:else>
-								<span class="neos-badge neos-badge-important"><f:translate id="inactive" /></span>
+								<span class="neos-badge neos-badge-important"><f:translate id="inactive">Inactive</f:translate></span>
 							</f:else>
 						</f:if>
 					</p>
 				</fieldset>
 				<fieldset class="neos-span5 neos-offset1">
-					<legend><f:translate id="domains" /></legend>
+					<legend><f:translate id="domains">Domains</f:translate></legend>
 					<table class="neos-table">
 						<thead>
 							<tr>
-								<th><f:translate id="domain" /></th>
-								<th colspan="3"><f:translate id="status" /></th>
+								<th><f:translate id="domain">Domain</f:translate></th>
+					<th colspan="3"><f:translate id="status">Status</f:translate></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -51,43 +51,43 @@
 								<td>
 									<f:if condition="{domain.active} == 1">
 										<f:then>
-											<span class="neos-badge neos-badge-success"><f:translate id="active" /></span>
+											<span class="neos-badge neos-badge-success"><f:translate id="active">Active</f:translate></span>
 										</f:then>
 										<f:else>
-											<span class="neos-badge neos-badge-important"><f:translate id="inactive" /></span>
+											<span class="neos-badge neos-badge-important"><f:translate id="inactive">Inactive</f:translate></span>
 										</f:else>
 									</f:if>
 								</td>
 								<td class="neos-action aRight">
 									<div class="neos-pull-right">
-										<f:link.action action="editDomain" arguments="{domain: domain}" class="neos-button" title="{f:translate(id: 'click.to.edit', default: 'Click to edit')}">
+										<f:link.action action="editDomain" arguments="{domain: domain}" class="neos-button" title="{f:translate(id: 'click.to.edit', value: 'Click to edit')}">
 											<i class="icon-pencil icon-white"></i>
 										</f:link.action>
 										<f:if condition="{domain.active} == 1">
 											<f:then>
-												<button form="postHelper" formaction="{f:uri.action(action: 'deactivateDomain', arguments: '{domain: domain}')}" type="submit" class="neos-button neos-button-warning" title="{f:translate(id: 'click.to.deactivate', default: 'Click to deactivate')}">
+												<button form="postHelper" formaction="{f:uri.action(action: 'deactivateDomain', arguments: '{domain: domain}')}" type="submit" class="neos-button neos-button-warning" title="{f:translate(id: 'click.to.deactivate', value: 'Click to deactivate')}">
 													<i class="icon-minus-sign icon-white"></i>
 												</button>
 											</f:then>
 											<f:else>
-												<button form="postHelper" formaction="{f:uri.action(action: 'activateDomain', arguments: '{domain: domain}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'click.to.activate', default: 'Click to activate')}">
+												<button form="postHelper" formaction="{f:uri.action(action: 'activateDomain', arguments: '{domain: domain}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'click.to.activate', value: 'Click to activate')}">
 													<i class="icon-plus-sign icon-white"></i>
 												</button>
 											</f:else>
 										</f:if>
-										<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.to.delete.package.key', default: 'Click to delete')}" data-toggle="modal" href="#{site.nodeName}-{number}">
+										<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.to.delete.package.key', value: 'Click to delete')}" data-toggle="modal" href="#{site.nodeName}-{number}">
 											<i class="icon-trash icon-white"></i>
 										</button>
 										<div class="neos-hide" id="{site.nodeName}-{number}">
 											<div class="neos-modal">
 												<div class="neos-modal-header">
 													<button type="button" class="neos-close neos-button" data-dismiss="modal"></button>
-													<div class="neos-header"><f:translate id="want.to.delete" /> "{domain.hostPattern}"? <f:translate id="cannot.be.undone" />.</div>
+													<div class="neos-header"><f:translate id="want.to.delete">Do you really want to delete</f:translate> "{domain.hostPattern}"? <f:translate id="cannot.be.undone">This action cannot be undone</f:translate>.</div>
 												</div>
 												<div class="neos-modal-footer">
-													<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel" /></a>
-													<button form="postHelper" formaction="{f:uri.action(action: 'deleteDomain', arguments: '{site: site, domain: domain}')}" type="submit" class="neos-button-danger neos-button" title="{f:translate(id: 'yes.delete.it', default: 'Yes, delete it')}">
-														<f:translate id="yes.delete.domain" />
+													<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel">Cancel</f:translate></a>
+													<button form="postHelper" formaction="{f:uri.action(action: 'deleteDomain', arguments: '{site: site, domain: domain}')}" type="submit" class="neos-button-danger neos-button" title="{f:translate(id: 'yes.delete.it', value: 'Yes, delete it')}">
+														<f:translate id="yes.delete.domain">Yes, delete the domain</f:translate>
 													</button>
 												</div>
 											</div>
@@ -100,35 +100,35 @@
 						</tbody>
 					</table>
 					<div class="neos-pull-right">
-						<f:link.action action="newDomain" arguments="{site: site}" class="neos-button neos-button-primary" title="{f:translate(id: 'click.create.new.domain', default: 'Click to create a new domain')}"><f:translate id="add.domain" /></f:link.action>
+						<f:link.action action="newDomain" arguments="{site: site}" class="neos-button neos-button-primary" title="{f:translate(id: 'click.create.new.domain', value: 'Click to create a new domain')}"><f:translate id="add.domain">Add domain</f:translate></f:link.action>
 					</div>
 				</fieldset>
 			</div>
 
 			<div class="neos-row-fluid">
 				<fieldset class="neos-span5">
-					<legend><f:translate id="site.package" /></legend>
+					<legend><f:translate id="site.package">Site package</f:translate></legend>
 					<table class="neos-info-table">
 						<tbody>
 							<tr>
-								<th><f:translate id="package.key" /></th>
+								<th><f:translate id="package.key">Package Key</f:translate></th>
 								<td>{site.siteResourcesPackageKey}</td>
 							</tr>
 							<f:if condition="{sitePackageMetaData.title}">
 								<tr>
-									<th><f:translate id="title" /></th>
+									<th><f:translate id="title">Title</f:translate></th>
 									<td>{sitePackageMetaData.title}</td>
 								</tr>
 							</f:if>
 							<f:if condition="{sitePackageMetaData.version}">
 								<tr>
-									<th><f:translate id="version" /></th>
+									<th><f:translate id="version">Version</f:translate></th>
 									<td>{sitePackageMetaData.version}</td>
 								</tr>
 							</f:if>
 							<f:if condition="{sitePackageMetaData.description}">
 								<tr>
-									<th><f:translate id="description" /></th>
+									<th><f:translate id="description">Description</f:translate></th>
 									<td>{sitePackageMetaData.description}</td>
 								</tr>
 							</f:if>
@@ -139,20 +139,20 @@
 		</div>
 
 		<div class="neos-footer">
-			<f:link.action action="index" class="neos-button"><f:translate id="cancel" /></f:link.action>
-			<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.delete.this.site', default: 'Click here to delete this site')}" data-toggle="modal" href="#{site.nodeName}">
-				<f:translate id="delete.this.site" />
+			<f:link.action action="index" class="neos-button"><f:translate id="cancel">Cancel</f:translate></f:link.action>
+			<button class="neos-button neos-button-danger" title="{f:translate(id: 'click.delete.this.site', value: 'Click here to delete this site')}" data-toggle="modal" href="#{site.nodeName}">
+				<f:translate id="delete.this.site">Delete this site</f:translate>
 			</button>
 			<div class="neos-hide" id="{site.nodeName}">
 				<div class="neos-modal">
 					<div class="neos-modal-header">
 						<button type="button" class="neos-close neos-button" data-dismiss="modal"></button>
-						<div class="neos-header"><f:translate id="delete.confirmation" /> "{site.name}"? <f:translate id="cannot.be.undone" />.</div>
+						<div class="neos-header"><f:translate id="delete.confirmation">Do you really want to delete</f:translate> "{site.name}"? <f:translate id="cannot.be.undone">This action cannot be undone</f:translate>.</div>
 					</div>
 					<div class="neos-modal-footer">
-						<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel" /></a>
-						<button form="postHelper" formaction="{f:uri.action(action: 'deleteSite', arguments: '{site: site, domain: domain}')}" type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'yes.delete.the.site', default: 'Yes, delete the site')}">
-							<f:translate id="yes.delete.the.site" />
+						<a href="#" class="neos-button" data-dismiss="modal"><f:translate id="cancel">Cancel</f:translate></a>
+						<button form="postHelper" formaction="{f:uri.action(action: 'deleteSite', arguments: '{site: site, domain: domain}')}" type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'yes.delete.the.site', value: 'Yes, delete the site')}">
+							<f:translate id="yes.delete.the.site">Yes, delete the site</f:translate>
 						</button>
 					</div>
 				</div>
@@ -160,13 +160,13 @@
 			</div>
 			<f:if condition="{site.online}">
 				<f:then>
-					<button form="postHelper" formaction="{f:uri.action(action: 'deactivateSite', arguments: '{site: site}')}" type="submit" class="neos-button neos-button-warning" title="{f:translate(id: 'click.to.deactivate', default: 'Click to deactivate')}">
-						<f:translate id="deactivate.site" />
+					<button form="postHelper" formaction="{f:uri.action(action: 'deactivateSite', arguments: '{site: site}')}" type="submit" class="neos-button neos-button-warning" title="{f:translate(id: 'click.to.deactivate', value: 'Click to deactivate')}">
+						<f:translate id="deactivate.site">Deactivate site</f:translate>
 					</button>
 				</f:then>
 				<f:else>
-					<button form="postHelper" formaction="{f:uri.action(action: 'activateSite', arguments: '{site: site}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'click.to.activate', default: '}Click to activate')}">
-						<f:translate id="activate.site" />
+					<button form="postHelper" formaction="{f:uri.action(action: 'activateSite', arguments: '{site: site}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'click.to.activate', value: 'Click to activate'})}">
+						<f:translate id="activate.site">Activate site</f:translate>
 					</button>
 				</f:else>
 			</f:if>

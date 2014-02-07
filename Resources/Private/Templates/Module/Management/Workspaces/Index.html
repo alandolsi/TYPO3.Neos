@@ -65,20 +65,20 @@
 											<td class="legend neos-priority1">
 												<label for="{change.node.identifier}">
 													<f:if condition="{change.node.removed}">
-														<f:then><i class="legend icon-trash icon-white" title="{f:translate(id: 'deleted', default: 'deleted')}"></i></f:then>
+														<f:then><i class="legend icon-trash icon-white" title="{f:translate(id: 'deleted', value: 'deleted')}"></i></f:then>
 														<f:else>
 															<f:if condition="{change.isNew}">
-																<f:then><i class="legend icon-star icon-white" title="{f:translate(id: 'created', default: 'created')}"></i></f:then>
+																<f:then><i class="legend icon-star icon-white" title="{f:translate(id: 'created', value: 'created')}"></i></f:then>
 																<f:else>
 																	<f:if condition="{change.isMoved}">
-																		<f:then><i class="legend icon-move icon-white" title="{f:translate(id: 'moved', default: 'moved')}"></i></f:then>
+																		<f:then><i class="legend icon-move icon-white" title="{f:translate(id: 'moved', value: 'moved')}"></i></f:then>
 																		<f:else>
 																			<f:if condition="{change.node.hidden}">
 																				<f:then>
-																					<i class="legend icon-eye-close icon-white" title="{f:translate(id: 'hidden', default: 'hidden')}"></i>
+																					<i class="legend icon-eye-close icon-white" title="{f:translate(id: 'hidden', value: 'hidden')}"></i>
 																				</f:then>
 																				<f:else>
-																					<i class="legend icon-pencil icon-white" title="{f:translate(id: 'edited', default: 'edited')}"></i>
+																					<i class="legend icon-pencil icon-white" title="{f:translate(id: 'edited', value: 'edited')}"></i>
 																				</f:else>
 																			</f:if>
 																		</f:else>
@@ -100,10 +100,10 @@
 											</td>
 											<td class="relpath neos-priority4"><label for="{change.node.identifier}">{f:if(condition: relativePath, then: relativePath, else: '&nbsp;')}</label></td>
 											<td class="neos-action neos-aRight neos-priority1">
-												<button form="postHelper" formaction="{f:uri.action(action: 'publishNode', arguments: '{node: change.node.contextPath}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'publish', default: 'Publish')}">
+												<button form="postHelper" formaction="{f:uri.action(action: 'publishNode', arguments: '{node: change.node.contextPath}')}" type="submit" class="neos-button neos-button-success" title="{f:translate(id: 'publish', value: 'Publish')}">
 													<i class="icon-check icon-white"></i>
 												</button>
-												<button form="postHelper" formaction="{f:uri.action(action: 'discardNode', arguments: '{node: change.node.contextPath}')}" type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'discard', default: 'Discard')}">
+												<button form="postHelper" formaction="{f:uri.action(action: 'discardNode', arguments: '{node: change.node.contextPath}')}" type="submit" class="neos-button neos-button-danger" title="{f:translate(id: 'discard', value: 'Discard')}">
 													<i class="icon-trash icon-white"></i>
 												</button>
 											</td>

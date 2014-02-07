@@ -4,11 +4,9 @@
 		<body>
 			<trans-unit id="visibility" xml:space="preserve">
 				<source>Visibility</source>
-				<target>Visibility</target>
 			</trans-unit>
 			<trans-unit id="hide.before" xml:space="preserve">
 				<source>Hide before</source>
-				<target>Visibility</target>
 			</trans-unit>
 		</body>
 	</file>

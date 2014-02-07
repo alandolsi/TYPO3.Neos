@@ -4,9 +4,83 @@
 		<body>
 			<trans-unit id="visibility" xml:space="preserve">
 				<source>Visibility</source>
+				<target>Visibility</target>
 			</trans-unit>
 			<trans-unit id="hide.before" xml:space="preserve">
 				<source>Hide before</source>
+				<target>Hide before</target>
+			</trans-unit>
+			<trans-unit id="hide.after" xml:space="preserve">
+				<source>Hide after</source>
+				<target>Hide after</target>
+			</trans-unit>
+			<trans-unit id="document" xml:space="preserve">
+				<source>Document</source>
+				<target>Document</target>
+			</trans-unit>
+			<trans-unit id="document.options" xml:space="preserve">
+				<source>Document options</source>
+				<target>Document options</target>
+			</trans-unit>
+			<trans-unit id="name.url" xml:space="preserve">
+				<source>Name (URL)</source>
+				<target>Name (URL)</target>
+			</trans-unit>
+			<trans-unit id="hide.in.menus" xml:space="preserve">
+				<source>Hide in menus</source>
+				<target>Hide in menus</target>
+			</trans-unit>
+			<trans-unit id="shortcut" xml:space="preserve">
+				<source>Shortcut</source>
+				<target>Shortcut</target>
+			</trans-unit>
+			<trans-unit id="shortcut" xml:space="preserve">
+				<source>Shortcut</source>
+				<target>Shortcut</target>
+			</trans-unit>
+			<trans-unit id="shortcut.options" xml:space="preserve">
+				<source>Shortcut options</source>
+				<target>Shortcut options</target>
+			</trans-unit>
+			<trans-unit id="target.mode" xml:space="preserve">
+				<source>Target mode</source>
+				<target>Target mode</target>
+			</trans-unit>
+			<trans-unit id="first.child.node" xml:space="preserve">
+				<source>First child node</source>
+				<target>First child node</target>
+			</trans-unit>
+			<trans-unit id="parent.node" xml:space="preserve">
+				<source>Parent node</source>
+				<target>Parent node</target>
+			</trans-unit>
+			<trans-unit id="selected.node" xml:space="preserve">
+				<source>Selected node</source>
+				<target>Selected node</target>
+			</trans-unit>
+			<trans-unit id="target.node" xml:space="preserve">
+				<source>Target node</source>
+				<target>Target node</target>
+			</trans-unit>
+			<trans-unit id="plugin" xml:space="preserve">
+				<source>Plugin</source>
+				<target>Plugin</target>
+			</trans-unit>
+			<trans-unit id="plugin.settings" xml:space="preserve">
+				<source>Plugin Settings</source>
+				<target>Plugin Settings</target>
+			</trans-unit>
+			<trans-unit id="plugin.view" xml:space="preserve">
+				<source>Plugin View</source>
+				<target>Plugin View</target>
+			</trans-unit>
+			<trans-unit id="plugin.views" xml:space="preserve">
+				<source>Plugin Views</source>
+				<target>Plugin Views</target>
+			</trans-unit>
+			<trans-unit id="master.view" xml:space="preserve">
+				<source>Master View</source>
+				<target>Master View</target>
 			</trans-unit>
 			<trans-unit id="logout" xml:space="preserve">
 				<source>Log out</source>
@@ -589,16 +663,16 @@
 				<target>This is a shortcut to a specific page.</target>
 			</trans-unit>
 			<trans-unit id="click" xml:space="preserve">
-				<source>Click </source>
-				<target>Click </target>
+				<source>Click</source>
+				<target>Click</target>
 			</trans-unit>
 			<trans-unit id="here" xml:space="preserve">
 				<source>here</source>
 				<target>here</target>
 			</trans-unit>
 			<trans-unit id="to.continue.the.page" xml:space="preserve">
-				<source> to continue to the page.</source>
-				<target> to continue to the page.</target>
+				<source>to continue to the page.</source>
+				<target>to continue to the page.</target>
 			</trans-unit>
 			<trans-unit id="shortcut.to.first.child.page" xml:space="preserve">
 				<source>This is a shortcut to the first child page.</source>

@@ -10,7 +10,7 @@
 		<f:if condition="{validationResults.flattenedErrors}">
 			<div class="neos-row neos-module-container neos-indented">
 				<div class="neos-alert neos-alert-error">
-					<p><strong><f:translate id="following.errors.occurred" /></strong></p>
+					<p><strong><f:translate id="following.errors.occurred">The following errors occurred</f:translate></strong></p>
 					<ul class="neos-error">
 						<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
 							<li>{propertyPath}: <f:for each="{errors}" as="error">{error}</f:for></li>
