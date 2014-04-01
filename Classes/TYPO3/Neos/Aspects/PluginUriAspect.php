@@ -20,7 +20,7 @@ use TYPO3\Eel\FlowQuery\FlowQuery;
 
 /**
  * @Flow\Scope("singleton")
- * @Flow\Aspect
+ *
  */
 class PluginUriAspect {
 

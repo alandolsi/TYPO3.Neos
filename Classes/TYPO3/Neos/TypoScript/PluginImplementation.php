@@ -165,10 +165,10 @@ class PluginImplementation extends AbstractTypoScriptObject implements \ArrayAcc
 	protected function getPluginNamespace() {
 		if ($this->node instanceof NodeInterface) {
 			$nodeArgumentNamespace = $this->node->getProperty('argumentNamespace');
-			if ($nodeArgumentNamespace !== NULL) {
-				return $nodeArgumentNamespace;
+				// use argumentNamespace from TypoScript if possible
+			if ($this->getArgumentNamespace() !== NULL) {
+				return $this->getArgumentNamespace();
 			}
-
 			$nodeArgumentNamespace = $this->node->getNodeType()->getName();
 			$nodeArgumentNamespace = str_replace(':', '-', $nodeArgumentNamespace);
 			$nodeArgumentNamespace = str_replace('.', '_', $nodeArgumentNamespace);
